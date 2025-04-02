@@ -5,11 +5,16 @@
 //  Created by Enkhtsetseg Unurbayar on 4/2/25.
 //
 
+// View has reference to Presenter
+
 import Foundation
 
-protocol AnyView {
+protocol AnyViewProtocol {
+    
     associatedtype DataType
-    var presenter: AnyPresenterProtocol? { get set }
+    associatedtype AnyPresenterType: AnyPresenterProtocol
+    
+    var presenter: AnyPresenterType? { get set }
     func update(with data: [DataType])
     func update(with error: String)
 }

@@ -5,14 +5,23 @@
 //  Created by Enkhtsetseg Unurbayar on 4/2/25.
 //
 
+/*
+ Presenter has ref to Interactor, Router, View
+*/
+
 import Foundation
 
-protocol AnyPresenter{
+protocol AnyPresenterProtocol {
     
-    var router: AnyRouter? {get set}
-    var intreactor: AnyInteractor? {get set}
-    var view: AnyView? {get set}
+    associatedtype DataType
+    associatedtype AnyInteractorType: AnyInteractorProtocol
+    associatedtype AnyRouterType: AnyRouterProtocol
+    associatedtype AnyViewType: AnyViewProtocol where AnyViewType.DataType == DataType
     
-    func intreactorDidFinishEmployes(with result:Result<[Product],Error>)
-    func showDetails(withData: Product)
+    var router: AnyRouterType? { get set }
+    var interactor: AnyInteractorType? { get set }
+    var view: AnyViewType? { get set }
+    
+    func interactorDidFinishFetching(with result: Result<[DataType], Error>)
+    func showDetails(with data: DataType)
 }

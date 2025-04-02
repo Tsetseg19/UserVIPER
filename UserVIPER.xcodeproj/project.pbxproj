@@ -24,9 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D82C39E2D9DA7610005D603 /* UserVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = UserVIPERTests.xctest; path = "/Users/enkhtsetsegunurbayar/Documents/MyProjects/UserVIPER/build/Debug-iphoneos/UserVIPER.app/PlugIns/UserVIPERTests.xctest"; sourceTree = "<absolute>"; };
-		3D82C3A82D9DA7610005D603 /* UserVIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = UserVIPERUITests.xctest; path = "/Users/enkhtsetsegunurbayar/Documents/MyProjects/UserVIPER/build/Debug-iphoneos/UserVIPERUITests-Runner.app/PlugIns/UserVIPERUITests.xctest"; sourceTree = "<absolute>"; };
-		3D82C3C42D9DAA270005D603 /* UserVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE5981D2D9DEF31006B404F /* UserVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE5981E2D9DEF31006B404F /* UserVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserVIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE5981F2D9DEF31006B404F /* UserVIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserVIPERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -91,7 +91,9 @@
 				3D82C38A2D9DA75F0005D603 /* UserVIPER */,
 				3D82C3A12D9DA7610005D603 /* UserVIPERTests */,
 				3D82C3AB2D9DA7610005D603 /* UserVIPERUITests */,
-				3D82C3C42D9DAA270005D603 /* UserVIPER.app */,
+				3DE5981D2D9DEF31006B404F /* UserVIPER.app */,
+				3DE5981E2D9DEF31006B404F /* UserVIPERTests.xctest */,
+				3DE5981F2D9DEF31006B404F /* UserVIPERUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,7 +119,7 @@
 			packageProductDependencies = (
 			);
 			productName = UserVIPER;
-			productReference = 3D82C3C42D9DAA270005D603 /* UserVIPER.app */;
+			productReference = 3DE5981D2D9DEF31006B404F /* UserVIPER.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3D82C39D2D9DA7610005D603 /* UserVIPERTests */ = {
@@ -140,7 +142,7 @@
 			packageProductDependencies = (
 			);
 			productName = UserVIPERTests;
-			productReference = 3D82C39E2D9DA7610005D603 /* UserVIPERTests.xctest */;
+			productReference = 3DE5981E2D9DEF31006B404F /* UserVIPERTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3D82C3A72D9DA7610005D603 /* UserVIPERUITests */ = {
@@ -163,7 +165,7 @@
 			packageProductDependencies = (
 			);
 			productName = UserVIPERUITests;
-			productReference = 3D82C3A82D9DA7610005D603 /* UserVIPERUITests.xctest */;
+			productReference = 3DE5981F2D9DEF31006B404F /* UserVIPERUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */

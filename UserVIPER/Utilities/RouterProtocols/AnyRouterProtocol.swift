@@ -11,8 +11,10 @@ typealias EntryPoint = UIViewController & AnyViewProtocol
 
 protocol AnyRouterProtocol {
     
-    var entry: (any EntryPoint)? { get }
-    static func start() -> AnyRouterProtocol
-    func moveToDetails(withData: DataType)
+    associatedtype DataType
     
+    var entry: (any EntryPoint)? { get }
+    
+    static func start() -> Self
+    func moveToDetails(withData: DataType)
 }
