@@ -17,7 +17,6 @@ final class UserRouter: AnyRouterProtocol {
     
     private weak var viewController: UIViewController?
     
-    // MARK: - Init
     init() {
         let view = UserView()
         let presenter = UserPresenter()

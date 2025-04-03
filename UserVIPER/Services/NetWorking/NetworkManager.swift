@@ -11,7 +11,7 @@ class NetworkManager: NetworkProtocol{
     
     
 
-    func fetchData<T>(from url: URL) async throws -> T where T : Decodable {
+    func fetchData<T : Decodable>(from url: URL) async throws -> T {
         
         let (data, response) = try await URLSession.shared.data(from : url)
         
