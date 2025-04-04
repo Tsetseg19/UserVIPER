@@ -35,6 +35,15 @@ class UserView: UIViewController, AnyViewProtocol {
     // MARK: - UI Setup
     private func setupTableView() {
         view.addSubview(tableView)
+        
+        
+        tableView.backgroundColor = .systemBackground
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        tableView.separatorColor = .separator.withAlphaComponent(0.7)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
+        tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 16)
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
@@ -42,11 +51,12 @@ class UserView: UIViewController, AnyViewProtocol {
         
         // Constraints
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
+        
     }
     
     // MARK: - VIPER Update Methods
@@ -78,7 +88,11 @@ extension UserView: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
         let user = users[indexPath.row]
         cell.textLabel?.text = "\(user.first_name) \(user.last_name)"
-//        cell.imageView?.image = UIImage(systemName: "person.circle") // Placeholder
+        cell.imageView?.image = UIImage(systemName: "person.circle") // Placeholder
+        cell.imageView?.layer.cornerRadius = 25
+        cell.imageView?.clipsToBounds = true
+        cell.imageView?.contentMode = .scaleAspectFill
+        cell.imageView?.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 50, height: 50))
         
         // Load image asynchronously
         DispatchQueue.global().async {
